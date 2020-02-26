@@ -144,7 +144,14 @@ DATASETS = {
         nemfile_pattern="PUBLIC_NEXT_DAY_DISPATCH_([0-9]{8})_[0-9]{16}.zip",
         datetime_format="%Y%m%d",
         datetime_column="SETTLEMENTDATE",
-        tables=['DISPATCH_UNIT_SOLUTION'])
+        tables=['DISPATCH_UNIT_SOLUTION']),
+    
+    "p5_min": CurrentDataset(
+        dataset_name="P5_Reports",
+        nemfile_pattern="PUBLIC_P5MIN_([0-9]{12})_[0-9]{16}.zip",
+        datetime_format="%Y%m%d%H%M%S",
+        datetime_column="RUN_DATETIME",
+        tables=['CASESOLUTION','LOCAL_PRICE','REGIONSOLUTION','INTERCONNECTORSOLN','CONSTRAINTSOLUTION']),
 }
 
 
