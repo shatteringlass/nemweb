@@ -50,8 +50,7 @@ setup(name='nemweb',
       cmdclass={'install': PostInstallCommand,
                 'develop': PostDevelopCommand},
       package_data={
-          [
-              'nemweb': 'tests/2018_09_21.pkl'
-          ],
-      }
+          'nemweb': [
+              'tests/2018_09_21.pkl'
+          ],}
       )
