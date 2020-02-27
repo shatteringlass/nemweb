@@ -52,6 +52,8 @@ def start_from(
         )
 
     except sqlite3.OperationalError:
-        date = datetime.datetime.strptime(start_date, "%Y%m%d")
+        if not start_date:
+            start_date = input("Set start date in YYYYMMDD format: ")
+            date = datetime.datetime.strptime(start_date, "%Y%m%d")
 
     return date
